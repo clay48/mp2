@@ -1,0 +1,226 @@
+.intro {
+  margin-bottom: 22px;
+}
+
+.heading {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+}
+
+.lede {
+  margin: 8px 0 0;
+  color: var(--ink-soft);
+}
+
+.filters {
+  padding: 16px;
+  margin-bottom: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.filterHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.filterLabel {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+.modeToggle {
+  display: flex;
+  gap: 3px;
+  padding: 3px;
+  background: var(--surface-2);
+  border-radius: 8px;
+}
+
+.mode,
+.modeActive {
+  padding: 4px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.modeActive {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* The type class from TypeBadge.module.css sets --type-color; we override its text colour. */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink) !important;
+  text-shadow: none !important;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+
+.chip:hover {
+  border-color: var(--type-color);
+}
+
+.chip:active {
+  transform: scale(0.97);
+}
+
+.chipDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--type-color);
+}
+
+.chipCount {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+
+.chipOn {
+  background: color-mix(in srgb, var(--type-color) 22%, var(--surface));
+  border-color: var(--type-color);
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.summary strong {
+  color: var(--ink);
+}
+
+.clear {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  background:
+    radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--type-color) 40%, transparent) 0, transparent 62%),
+    color-mix(in srgb, var(--type-color) 12%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--type-color) 30%, var(--line));
+  color: var(--ink) !important;
+  text-shadow: none !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px -16px color-mix(in srgb, var(--type-color) 80%, black);
+}
+
+.number {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.art {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  padding: 22px 18px 4px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 10px rgb(0 0 0 / 18%));
+  transition: transform 0.25s ease;
+}
+
+.card:hover .art {
+  transform: scale(1.06);
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 14px 14px;
+  margin-top: auto;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.types {
+  display: flex;
+  gap: 5px;
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .art {
+    padding: 20px 10px 0;
+  }
+}

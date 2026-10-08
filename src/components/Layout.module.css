@@ -1,0 +1,124 @@
+.shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.headerInner {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+/* A small Poké Ball drawn with borders and gradients. */
+.mark {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border-radius: 50%;
+  border: 3px solid var(--ink);
+  background:
+    radial-gradient(circle at 50% 50%, var(--surface) 0 4px, var(--ink) 4px 7px, transparent 7px),
+    linear-gradient(var(--accent) 0 calc(50% - 1.5px), var(--ink) calc(50% - 1.5px) calc(50% + 1.5px), var(--surface) calc(50% + 1.5px));
+  transition: transform 0.4s ease;
+}
+
+.brand:hover .mark {
+  transform: rotate(-25deg);
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.brandSub {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 3px;
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--surface-2);
+  border-radius: 999px;
+}
+
+.navLink {
+  padding: 7px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  transition: background 0.15s, color 0.15s;
+}
+
+.navLink:hover {
+  color: var(--ink);
+}
+
+.active {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 520px) {
+  .brandSub {
+    display: none;
+  }
+
+  .navLink {
+    padding: 6px 12px;
+  }
+}

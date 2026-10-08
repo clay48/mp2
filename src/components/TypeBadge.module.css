@@ -1,0 +1,107 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: var(--type-color, var(--ink-soft));
+  text-shadow: 0 1px 1px rgb(0 0 0 / 25%);
+  white-space: nowrap;
+}
+
+.md {
+  padding: 4px 11px;
+  font-size: 0.72rem;
+}
+
+.sm {
+  padding: 2px 8px;
+  font-size: 0.64rem;
+}
+
+/* Light type colours need dark text to stay readable. */
+.electric,
+.ice,
+.ground,
+.steel,
+.normal,
+.bug,
+.rock {
+  color: #1d1b22;
+  text-shadow: none;
+}
+
+.normal {
+  --type-color: var(--type-normal);
+}
+
+.fire {
+  --type-color: var(--type-fire);
+}
+
+.water {
+  --type-color: var(--type-water);
+}
+
+.electric {
+  --type-color: var(--type-electric);
+}
+
+.grass {
+  --type-color: var(--type-grass);
+}
+
+.ice {
+  --type-color: var(--type-ice);
+}
+
+.fighting {
+  --type-color: var(--type-fighting);
+}
+
+.poison {
+  --type-color: var(--type-poison);
+}
+
+.ground {
+  --type-color: var(--type-ground);
+}
+
+.flying {
+  --type-color: var(--type-flying);
+}
+
+.psychic {
+  --type-color: var(--type-psychic);
+}
+
+.bug {
+  --type-color: var(--type-bug);
+}
+
+.rock {
+  --type-color: var(--type-rock);
+}
+
+.ghost {
+  --type-color: var(--type-ghost);
+}
+
+.dragon {
+  --type-color: var(--type-dragon);
+}
+
+.dark {
+  --type-color: var(--type-dark);
+}
+
+.steel {
+  --type-color: var(--type-steel);
+}
+
+.fairy {
+  --type-color: var(--type-fairy);
+}

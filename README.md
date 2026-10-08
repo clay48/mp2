@@ -1,3 +1,28 @@
+# MP2 Submission: Kanto Index
+
+**Live site:** https://clay48.github.io/mp2/
+
+A React + TypeScript single-page app for browsing the original 151 Pokémon with [PokéAPI](https://pokeapi.co/).
+
+| Requirement | Where it lives |
+| --- | --- |
+| List view: search as you type (name, number, or type), sort by Pokédex #, Name, or Primary type, ascending or descending | `/list`, `src/pages/ListView.tsx` |
+| Gallery view: official artwork, multi-select type filters with Any/All matching | `/gallery`, `src/pages/GalleryView.tsx` |
+| Detail view: own route, item details, Previous/Next (wraps around, follows the list/gallery order you came from; ← → keys also work) | `/pokemon/:id`, `src/pages/DetailView.tsx` |
+| React Router with `basename`, Axios for every API call, TypeScript throughout | `src/main.tsx`, `src/App.tsx`, `src/api/pokeapi.ts` |
+| API error handling with retry; responses cached per session | `src/api/pokeapi.ts`, `src/components/StatusMessage.tsx` |
+
+Styling uses CSS Modules and Normalize.css; there is no inline styling, no inline scripting, and no tables. `npm run build` also copies `index.html` to `404.html` so detail URLs load directly on GitHub Pages.
+
+## Sources and LLM usage
+
+- This project's code was generated with an LLM (Anthropic's Claude). The chat log is submitted with the grading form, as the course LLM policy requires.
+- [PokéAPI](https://pokeapi.co/docs/v2) for data and its [sprites repository](https://github.com/PokeAPI/sprites) for images.
+- [React](https://react.dev/learn), [React Router](https://reactrouter.com/), [Axios](https://axios-http.com/docs/intro), [Vite](https://vite.dev/guide/), [Normalize.css](https://necolas.github.io/normalize.css/).
+- Fonts: Bricolage Grotesque, Figtree and IBM Plex Mono from Google Fonts.
+
+---
+
 # MP 2: Front-end App
 ### Due: Tuesday, Oct 6, 2026, 11:59PM CT
 
